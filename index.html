@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Profit Organization</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #881ced;
+            color: #c21818;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-image: url('https://source.unsplash.com/1600x900/?community,people');
+            background-size: cover;
+            color: #dfef30;
+            padding: 50px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(243, 240, 240, 0.921);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            text-shadow: 2px 2px 4px rgba(240, 230, 230, 0.955);
+            margin: 0;
+            animation: slideIn 1s ease-in-out forwards;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        section {
+            padding: 50px 20px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(248, 245, 245, 0.966);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+        }
+
+        #about {
+            background: linear-gradient(to right, #FF6F61, #6FA3EF);
+            color: #f6b91e;
+        }
+
+        #mission {
+            background: #ffa05c;
+            color: #f4ecec;
+        }
+
+        #projects {
+            background: #44d5ef;
+            color: #ef1414;
+        }
+
+        #donate {
+            background: linear-gradient(to right, #FF6F61, #FF3B3B);
+            color: #fff;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 2.5em;
+            font-family: 'Montserrat', sans-serif;
+            transition: color 0.3s ease;
+        }
+
+        h2:hover {
+            color: #ffcc5c;
+        }
+
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        .project {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            width: calc(30% - 40px);
+            box-shadow: 0 4px 10px rgba(247, 244, 244, 0.905);
+            transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0;
+            animation: fadeInUp 0.5s forwards;
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(247, 245, 245, 0.957);
+        }
+
+        .project img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+            transition: transform 0.3s ease;
+        }
+
+        .project img:hover {
+            transform: scale(1.05);
+        }
+
+        .donate-button {
+            background-color: #FF3B3B;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(249, 244, 244, 0.995);
+        }
+
+        .donate-button:hover {
+            background-color: #C42B2B;
+            transform: scale(1.05);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(255, 249, 249, 0.932);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #6FBF7F;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .project {
+                width: calc(45% - 40px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project {
+                width: calc(100% - 40px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Our Non-Profit Organization</h1>
+    <p style="font-size: 1.5em; margin-top: 10px;">Making a Difference Together</p>
+</header>
+
+<section id="about">
+    <h2><u>About Us</u></h2>
+    <p><b><i>We are committed to making a difference in the community through our several initiatives and endeavors.</i></b></p>
+    <img src="C:\Users\hp\OneDrive\Desktop\599323.jpg" alt="About Us" style="max-width: 40%; border-radius: 10px; margin-top: 20px;">
+</section>
+
+<section id="mission">
+    <h2><u>Our Mission</u></h2>
+    <p><b><i>To empower individuals and promote long-term change via education, advocacy, and support.</i></b></p>
+    <img src="C:\Users\hp\OneDrive\Desktop\1707454130428.png" alt="Our Mission" style="max-width: 20%; border-radius: 10px; margin-top: 20px;">
+</section>
+
+<section id="projects">
+    <h2>Our Projects</h2>
+    <div class="projects">
+        <div class="project">
+            <img src="C:\Users\hp\OneDrive\Desktop\images.jpg" alt="Project One">
+            <h3>Project One</h3>
+            <p>Providing education resources to underprivileged children.</p>
+        </div>
+        <div class="project">
+            <img src="C:\Users\hp\OneDrive\Desktop\Calabar-1.jpg" alt="Project Two">
+            <h3>Project Two</h3>
+            <p>Environmental cleanup in local communities.</p>
+        </div>
+        <div class="project">
+            <img src="C:\Users\hp\OneDrive\Desktop\images (1).jpg" alt="Project Three">
+            <h3>Project Three</h3>
+            <p>Health workshops and screenings for low-income families.</p>
+        </div>
+    </div>
+
+    <h2>Project Details</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Project Name</th>
+                <th>Description</th>
+                <th>Impact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Project One</td>
+                <td>Provides education resources to underprivileged children.</td>
+                <td>500 children impacted.</td>
+            </tr>
+            <tr>
+                <td>Project Two</td>
+                <td>Environmental cleanup in local communities.</td>
+                <td>1000 kg of waste removed.</td>
+            </tr>
+            <tr>
+                <td>Project Three</td>
+                <td>Health workshops and screenings for low-income families.</td>
+                <td>200 families assisted.</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section id="donate">
+    <h2>Support Us</h2>
+    <p>Your contributions help us continue our work. Please consider making a donation.</p>
+    <a href="donate.html" class="donate-button">Donate Now</a>
+</section>
+
+<footer>
+    <p>&copy; 2024 Our Non-Profit Organization. All Rights Reserved.</p>
+    <p>Follow us on 
+        <a href="#" style="color: #FFCC5C;">Facebook</a>, 
+        <a href="#" style="color: #FFCC5C;">Twitter</a>, 
+        <a href="#" style="color: #FFCC5C;">Instagram</a>
+    </p>
+</footer>
+
+</body>
+</html>
